@@ -64,8 +64,9 @@ public class Uva_10662_TheWedding {
                         for (int z=0;z<h;z++){
                             if (gridRH[j][z]==0 && gridHT[z][i]==0){
                                 possible=true;
-                               if (tPrices[i]+rPrices[j]+hPrices[z]<cheapestCost){
-                                   cheapestCost=tPrices[i]+rPrices[j]+hPrices[z];
+                                int currPrice = tPrices[i] + rPrices[j] + hPrices[z];
+                                if (currPrice <cheapestCost){
+                                   cheapestCost= currPrice;
                                      x=i;
                                      y=j;
                                      k=z;
